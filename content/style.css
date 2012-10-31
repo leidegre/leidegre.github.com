@@ -1,0 +1,70 @@
+html, body {
+	border: none;
+	margin: 0;
+}
+
+body, tbody {
+	font-family: "Corbel";
+}
+
+/*HTML 5 reset*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+ul#twitter-feed {
+	color: #000;
+}
+
+ul#twitter-feed, ul#twitter-feed li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul#twitter-feed li {
+	margin: 10px 0;
+}
+
+a.tweet-user, a.tweet-hash {
+	text-decoration: none;
+}
+
+.tweet-date {
+	font-size: 0.8em;
+	color: rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 900px) {
+
+	/*these rules are applied if the screen estate is less than 980px*/
+	body {
+	}
+
+	#wrapper {
+		margin: 0 auto;
+	}
+
+	#wrapper-main {
+		float: left;
+		width: 70%;
+	}
+
+	#wrapper-main-inner {
+		padding: 0 20px;
+	}
+
+	#wrapper-sidebar {
+		float: left;
+		width: 30%;
+	}
+
+	#wrapper-sidebar-inner {
+		padding-right: 20px;
+	}
+
+	.widget-img {
+		max-width: 200px;
+	}
+
+}

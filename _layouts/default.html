@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	{% include meta.html %}
+	{% include analytics.html %}
+</head>
+<body>
+
+<div id="disclaimer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5)">
+<div style="position: fixed; top: 50%; left: 0; width: 100%; height: 200px; margin-top: -100px; background: rgb(255,255,255); color: rgb(48,48,48)">
+<div style="margin: 0 auto; width: 640px;">
+
+	<h1>Remodelling...</h1>
+
+	<p>
+		The site your currently viewing is work in progress, please be patient.
+		I'm working hard on getting everything back to where it was...
+	</p>
+
+	<button type="button" onclick="$('#disclaimer').hide()">OK, thank's for telling me...</button>
+
+</div>
+</div>
+</div>
+
+<div id="wrapper">
+<div id="wrapper-main">
+<div id="wrapper-main-inner">
+
+{% for post in site.posts limit 10 %}
+
+	<h2>
+		<span class="post-date">{{ post.date | date: "%d %B %Y" }}</span><br />
+ 		<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+	</h2>
+
+	<div class="post">
+	
+	{{ post.content }}
+
+	</div>
+
+
+{% endfor %}
+
+</div>
+</div>
+<div id="wrapper-sidebar">
+<div id="wrapper-sidebar-inner">
+
+<div class="widget">
+
+	<img class="widget-img" src="content/john.jpg" />
+
+	<p>
+	Click <a href="/content/resume_jleidegren.pdf">here</a> for a copy of my resume. There's also tonnes of information on this blog and in relation to my profile over at <a href="http://stackoverflow.com/users/58961/john-leidegren">StackOverflow</a> if you wanna find out even more about me.
+	</p>
+	
+	<p>
+	The opinions expressed here are my own, not necessarily those of my employer.
+	</p>
+
+</div>
+
+<div class="widget">
+<ul id="twitter-feed"></ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+getTwitterFeed("John_Leidegren", "#twitter-feed");
+</script>
+
+</body>
+</html>

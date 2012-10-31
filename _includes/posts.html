@@ -1,0 +1,4 @@
+<h2>Blog Posts</h2>
+{% for p in site.posts %}
+  <article><h3><a href="{{ p.url }}">{{ p.title }}</a></h3></article>
+{% endfor %}

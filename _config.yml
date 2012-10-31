@@ -1,0 +1,4 @@
+auto: true
+
+source:      .
+destination: ./_site
