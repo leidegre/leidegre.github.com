@@ -4,24 +4,7 @@
 	{% include meta.html %}
 	{% include analytics.html %}
 </head>
-<body>
-
-<div id="disclaimer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5)">
-<div style="position: fixed; top: 50%; left: 0; width: 100%; height: 200px; margin-top: -100px; background: rgb(255,255,255); color: rgb(48,48,48)">
-<div style="margin: 0 auto; width: 640px;">
-
-	<h1>Remodelling...</h1>
-
-	<p>
-		The site your currently viewing is work in progress, please be patient.
-		I'm working hard on getting everything back to where it was...
-	</p>
-
-	<button type="button" onclick="$('#disclaimer').hide()">OK, thank's for telling me...</button>
-
-</div>
-</div>
-</div>
+<body class="page">
 
 <div id="wrapper">
 <div id="wrapper-main">
@@ -30,7 +13,7 @@
 {% for post in site.posts limit 10 %}
 
 	<h2>
-		<span class="post-date">{{ post.date | date: "%d %B %Y" }}</span><br />
+		<span class="post-date">{{ post.date | date: "%e %B %Y" }}</span><br />
  		<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
 	</h2>
 
@@ -39,7 +22,6 @@
 	{{ post.content }}
 
 	</div>
-
 
 {% endfor %}
 
@@ -50,24 +32,67 @@
 
 <div class="widget">
 
-	<h2>This is me</h2>
-
-	<img style="width:100%;max-width:486px;" class="widget-img" src="content/john.jpg" />
-
-	<p>
-	Click <a href="/content/resume_jleidegren.pdf">here</a> for a copy of my resume. There's also tonnes of information on this blog and in relation to my profile over at <a href="http://stackoverflow.com/users/58961/john-leidegren">StackOverflow</a> if you wanna find out even more about what I do.
-	</p>
+    <div class="widget-wrapper">
 	
-	<p class="disclaimer">
-	Also, please keep in mind; 
-	the opinions expressed here are my own, not necessarily those of my employer.
-	</p>
+        <h2>This is me</h2>
+    
+    </div>
+
+    <div style="text-align: center;">
+	<img style="width:100%;max-width:486px" src="/content/john.jpg" alt="John Leidegren" title="John Leidegren" />
+    </div>
+
+    <div class="widget-wrapper">
+	
+        <p>
+	    Click <a href="/content/resume_jleidegren.pdf">here</a> for a copy of my resume. 
+        There's also tonnes of information on this blog and in relation to my profile 
+        over at <a href="http://stackoverflow.com/users/58961/john-leidegren">StackOverflow</a> 
+        if you wanna find out even more about what I do.
+	    </p>
+	
+	    <p class="disclaimer">
+	    Also, please keep in mind; 
+	    the opinions expressed here are my own, not necessarily those of my employer.
+	    </p>
+
+    </div>
 
 </div>
 
 <div class="widget">
+    
+    <div class="widget-wrapper">
+
+    <h3>Something computer sciency</h3>
+
+    <ul class="widget-links">
+        <li><a href="http://yow.eventer.com/events/1004/talks/1028">Temporally Quaquaversal Virtual Nanomachine</a></li>
+    </ul>
+
+    <h3>Something humanitarian</h3>
+
+    <ul class="widget-links">
+        <li><a href="http://www.gdcvault.com/play/1012346/Concrete-Practices-to-be-a">Concrete Practices to Be a Better Leader</a></li>
+        <li><a href="http://www.gdcvault.com/play/1015694/Concrete-Practices-to-Be-a">Concrete Practices to Be a Better Leader:<br />Framing &amp; Intention</a></li>
+        <li><a href="http://www.ted.com/index.php/talks/ken_robinson_says_schools_kill_creativity.html">Ken Robinson - Do schools kill creativity?</a></li>
+        <li><a href="http://www.ted.com/talks/sir_ken_robinson_bring_on_the_revolution.html">Ken Robinson - Bring on the learning revolution!</a></li>
+        <li><a href="http://www.ted.com/talks/jamie_oliver.html">Jamie Oliver's TED Prize wish:<br />Teach every child about food</a></li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="widget">
+
+    <div class="widget-wrapper">
+
 	<h2>@John_Leidegren</h2>
 	<ul id="twitter-feed"></ul>
+
+    </div>
+
 </div>
 
 </div>
