@@ -12,6 +12,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+.disclaimer {
+	font-style: italic;
+}
+
 ul#twitter-feed {
 	color: #000;
 }
