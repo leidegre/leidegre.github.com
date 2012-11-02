@@ -1,10 +1,7 @@
 ---
-title: Recruiting for Snow
+title: Recruiting for Snow Software
 layout: post
 ---
-
-Recruiting for Snow
-====
 
 I work as a Lead Software Engineer at Snow Software, we build tools and 
 technology for [SAM][1] (Software Asset Management).

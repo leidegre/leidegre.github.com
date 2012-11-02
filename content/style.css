@@ -16,6 +16,35 @@ a:hover {
     color: rgba(0, 68, 204, 0.5);
 }
 
+ul {
+    margin: auto 10px;
+    padding: 0;
+}
+
+ul > li {
+    margin: auto 10px;
+    padding: 0;
+}
+
+ol {
+    margin: auto 20px;
+    padding: 0;
+}
+
+ol > li {
+    margin: auto 10px;
+    padding: 0;
+}
+
+* > li:not(:first-child):not(:last-child) {
+    margin: 0.5em 10px;
+}
+
+blockquote {
+    margin: auto 10px;
+    padding: 10px;
+}
+
 /*HTML 5 reset*/
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
     display: block;
