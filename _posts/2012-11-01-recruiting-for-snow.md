@@ -1,5 +1,5 @@
 ---
-title: Recruiting for Snow Software
+title: Working @ Snow Software
 layout: post
 ---
 
@@ -16,14 +16,15 @@ we can do just that, and that's why you should consider working with us.
  * I believe in people whom are self-improving (motived to realize one's full potential).
  * I believe in those whom enjoy working with others.
 
-We are hiring and we need people with expertise in C++, C#, HTML/CSS/JavaScript, REST, SQL Server/T-SQL and
-everything there in between. If you know a lot about at least two of these very broad topics, feel free
-to contact me anytime at
+We are always looking for people with expertise in C++, C#, HTML/CSS/JavaScript, REST, SQL Server/T-SQL and
+everything there in between. If you (**individuals only/no organizations**) know a lot about at least two of these topics, feel free to contact me anytime at
 
 > John Leidegren  
 > [john.leidegren@snowsoftware.com](mailto:john.leidegren@snowsoftware.com)  
 > +46 734 304 63 8
 
 We are located in Solna, Stockholm, Sweden.
+
+***I have to insist that if you work for a requirement/HR organization that you do not contact me at all. This is an opportunity for people with the right skillset and these people know, well on thier own, if this is a job for them or not.***
 
 [1]: http://en.wikipedia.org/wiki/Software_asset_management
