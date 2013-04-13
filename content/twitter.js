@@ -1,4 +1,3 @@
-
 (function ($) {
 
     function getDate(s) {
@@ -30,7 +29,7 @@
     }
 
     function parse(input, container) {
-        var parser = /(@\w+|#\w+|http:\/\/[^ ]+)/g, index = 0, m = null;
+        var parser = /(@\w+|#\w+|https?:\/\/[^ ]+)/g, index = 0, m = null;
         while ((m = parser.exec(input)) != null) {
             if (m.index - index > 0)
                 container.append($('<span/>').text(input.substring(index, m.index)));
