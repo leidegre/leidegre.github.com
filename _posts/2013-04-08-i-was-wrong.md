@@ -15,9 +15,9 @@ The value of a good idea will always outweigh the bad and no amount legislation 
 
 So, I'm a Software Engineer and of course, I write from that point of view.
 
-Actions speak louder than words, talk is cheap, show me the code. Unfortunately, I don't know *yet* how to code human beings but I do know code and lately I've been less worried about being wrong and more focused on what's moves us forward. I'd recommend anyone reading this to check out Chet Faliszek presentation at Eurogamer Expo 2012 (https://www.youtube.com/watch?v=tdwzvdZFxVM) becuase that's when it dawned up on me that my worries about being wrong had paralized me to the point where it's inhibiting my productivity. I still get things done, it's just that I'm not that adamant about getting the design right the first time, I'm wrong more often but we move at a faster pace.
+Actions speak louder than words, talk is cheap, show me the code. Unfortunately, I don't know *yet* how to code human beings but I do know code and lately I've been less worried about being wrong and more focused on what's moves us forward. I'd recommend anyone reading this to check out Chet Faliszek presentation at Eurogamer Expo 2012 ([https://www.youtube.com/watch?v=tdwzvdZFxVM](https://www.youtube.com/watch?v=tdwzvdZFxVM)) becuase that's when it dawned up on me that my worries about being wrong had paralized me to the point where it's inhibiting my productivity. I still get things done, it's just that I'm not that adamant about getting the design right the first time, I'm wrong more often but we move at a faster pace.
 
-To tie this together with another favoured quote from Gabe Newell during his talk at The LBJ School of Public Affairs (https://www.youtube.com/watch?v=t8QEOBgLBQU)
+To tie this together with another favoured quote from Gabe Newell during his talk at The LBJ School of Public Affairs ([https://www.youtube.com/watch?v=t8QEOBgLBQU](https://www.youtube.com/watch?v=t8QEOBgLBQU))
 
 > By talent -- which is a word I hate -- I mean the ability to be productive.
 
@@ -27,7 +27,7 @@ And with that I'd like to summarize with a wonderful web comic which I think als
 
 **Scientists** (as not to generalize the entire community) tend to simplify their problem. For good reason but to a point that it becomes difficult to fit real world problems to solutions that make sense in theory.
 
-Feel free to follow the link now (http://abstrusegoose.com/406).
+Feel free to follow the link now ([http://abstrusegoose.com/406](http://abstrusegoose.com/406)).
 
 It's refreshing to see someone bash on scientists for all of their conundrums. And hopefully I do not misrepresent the comic when I say that theory is nice but it not helpful in general and generalizations in general is not helpful either. And that when we approach a problem there's more value in being prepared to do whatever, to be able to twist and turn to put one foot in front of the other.
 
