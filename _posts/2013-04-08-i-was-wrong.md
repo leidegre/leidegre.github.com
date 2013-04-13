@@ -21,7 +21,7 @@ To tie this together with another favoured quote from Gabe Newell during his tal
 
 > By talent -- which is a word I hate -- I mean the ability to be productive.
 
-And with that, I'm rationalizing a lot of my behavior around the idea that it's better overall, if I can be productive even though there is a larger risk of making a bad design decision somewhere and what I try to do, is to make sure that these things happen in isolation, as to not have to much of an avalanche effect.
+I'm rationalizing a lot of my behavior around the idea that it's better overall, if I can be productive even though there is a larger risk of making a bad design decision somewhere and what I try to do, is to make sure that these things happen in isolation, as to not have to much of an avalanche effect.
 
 And with that I'd like to summarize with a wonderful web comic which I think also resonates very well with what I've been trying to say here. But before you click the next link, read the next paragraph. 
 
