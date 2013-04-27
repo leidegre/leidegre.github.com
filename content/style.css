@@ -20,11 +20,11 @@ h1, h2, h3 {
 }
 
 a {
-    color: #04c;
+    color: #039;
 }
 
 a:hover {
-    color: rgba(0, 68, 204, 0.5);
+    color: #05f;
 }
 
 ul {
@@ -106,6 +106,19 @@ a.post-title:hover {
     border-left: solid 3px rgb(248, 248, 248);
     color: gray;
     font-style: italic;
+}
+
+.post-footer {
+	margin: 10px auto;
+}
+
+.post-footer a {
+	color: #999;
+	text-decoration: none;
+}
+
+.post-footer a:hover {
+	color: #05f;
 }
 
 @media screen and (min-width: 900px) {

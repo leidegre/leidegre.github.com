@@ -12,6 +12,11 @@
 
 	<p><a href="/">back</a></p>
 
+	<h2>
+		<span class="post-date">{{ page.date | date: "%e %B %Y" }}</span><br />
+		<a class="post-title" href="{{ url }}">{{ page.title }}</a>
+	</h2>
+
 	<div class="post">
 
 	{{ content }}
