@@ -7,8 +7,6 @@ I don't know how I ended up reading through most of a blog post from early 2011 
 
 It wasn't until the next day I discovered that the post was a two years old. I thought I'd publish some of my own observations on what might be different, at well managed development studio, as supposed to your average software company and why that is.
 
-> I have to agree with what some already have managed to say so well. I don't think you get it, but you can get an idea if you get to know the right people.
-> 
 > First, there are people who know the industry and there are those who don't. The people I'm talking about have been around awhile and are among the most respectful and insightful people I've had the opportunity to learn from or know of. These are the people that give great presentations at conferences such as GDC and help the industry move forward as a whole.
 > 
 > With this in mind (and mind you, I'm not one of these people) I'd like to share some of the things that I've found to come into stark contrast with my existing beliefs as a more traditional software engineer.
@@ -21,7 +19,7 @@ It wasn't until the next day I discovered that the post was a two years old. I t
 >
 > If you want to know more about the process of game development I urge you to read some of the publications available from EA DICE or Insomniac Games (they talk about this stuff becuase it make a lot of sense in the context of what they do!) I can personally recommend [#GDC12 Ron Pieket: Developing Imperfect Software: The Movie][2].
 >
-> That said, game development is not traditional software development, if you think that, you will fail at it. As to whether they are ahead or not, I'm pretty sure they've been ahead the rest of us from the start. You just don't know where to look.
+> That said, game development is not traditional software development, if you think that, you will fail at it. As to whether they are ahead or not, I'm pretty sure they've been ahead the rest of us from the start. You just need to know where to look.
 
 [1]: http://blog.chromosundrift.com/2011/04/are-game-developers-15-years-behind.html
 [2]: http://www.insomniacgames.com/gdc12-ron-pieket-developing-imperfect-software-the-movie/
