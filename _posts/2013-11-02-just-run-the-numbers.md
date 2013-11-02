@@ -55,12 +55,11 @@ I ran the tests for 10 seconds. The code ran as many times as it could manage an
 
     C#                          C++
     ----                        ----
-    test
+    > test
     7c9e6865  5.906 1000ops/µs  7c9e6865 0.015047 1000ops/us
     7c9e6865  4.342 1000ops/µs  7c9e6865 0.014373 1000ops/us
     1.360x                      1.046909x
-    
-    The quick brown fox jumps over the lazy dog
+    > The quick brown fox jumps over the lazy dog
     34cc38de 45.780 1000ops/µs  34cc38de 0.014252 1000ops/us
     34cc38de 36.901 1000ops/µs  34cc38de 0.014036 1000ops/us
     1.241x                      1.015400x
