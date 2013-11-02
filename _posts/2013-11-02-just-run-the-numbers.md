@@ -64,7 +64,7 @@ I ran the tests for 10 seconds. The code ran as many times as it could manage an
     34cc38de 36.901 1000ops/µs  34cc38de 0.014036 1000ops/µs
     1.241x                      1.015400x
     
-Some intresting observations. Optimized C# code ran faster than unoptimized C++ code but optimized C++ code (i.e. with compiler optimizations enabled) ran between 300x-3000x faster than any C# could muster. This test does favour native code due to the heavy array index overhead in managed code. It's sad though becuase you could easily invent abstractions that allow you to express a computation over a range of values in a type safe manner.
+Some intresting observations. Optimized C# code ran faster than unoptimized C++ code but C++ code compiled with compiler optimizations enabled ran between 300x-3000x faster than anything C# could muster. This test does favour native code due to the heavy array index overhead in managed code. It's sad though becuase you could easily invent abstractions that allow you to express a computation over a range of values in a type safe manner.
 
 I had a teacher once, he told me that what you do with code doesn't matter, as long as the algorithm isn't good. Well that is not bad advice but this complete disregard of what big a difference the choice of platform can make. A factor of 1000x isn't a negliable gain.
 
