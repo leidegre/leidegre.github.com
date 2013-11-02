@@ -6,6 +6,28 @@
 </head>
 <body class="page">
 
+<script type="text/javascript">
+        
+    !function(){
+        var twitterStyle;
+        twitterStyle = function () {
+            var el = $('.twitter-timeline')[0];
+            if (el) {
+                $(el)
+                    .contents()
+                    .find("head")
+                    .append($("<style type='text/css'>html, body, h1, h2, h3, blockquote, p, ol, ul, li, img, iframe, button { font-family: 'Georgia' !important; line-height: 1.5em !important } </style>"))
+                ;
+            } else {
+                setTimeout(twitterStyle, 100);
+            }
+        }
+        setTimeout(twitterStyle, 100);
+    }();
+
+</script>
+
+
 <div id="wrapper">
 <div id="wrapper-main">
 <div id="wrapper-main-inner">
@@ -104,7 +126,7 @@
 	
 	<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/John_Leidegren" data-widget-id="257513351624658946" data-chrome="noheader nofooter noborders noscrollbar transparent" data-tweet-limit="20"></a>
     
-    	<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
 
     </div>
 
