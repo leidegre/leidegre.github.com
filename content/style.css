@@ -80,6 +80,24 @@ a.post-title {
 a.post-title:hover {
 }
 
+.post pre {
+	padding: 20px;
+	border: none;
+	border-radius: 4px;
+	max-width: 100ch;
+	font-family: 'Consolas' , 'Monospaced', 'Courier New';
+	font-size: 10pt;
+	background-color: #333;
+	color: #f0f0f0;
+}
+
+.post code {
+	font-family: 'Consolas' , 'Monospaced', 'Courier New';
+	font-size: 10pt;
+	background-color: #333;
+	color: #f0f0f0;
+}
+
 .post blockquote {
     border-left: solid 10px rgb(224, 224, 224);
     color: #808080;
