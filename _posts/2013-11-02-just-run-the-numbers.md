@@ -16,7 +16,7 @@ C# version:
         }
         return hash;
     }
-
+     
     public static int Djb2HashFaster(byte[] bytes)
     {
         int hash = 5381;
@@ -39,13 +39,13 @@ C++ version:
         }
         return hash;
     }
-    
+     
     int Djb2HashFaster(const char* bytes)
     {
         int hash = 5381;
         for (int val = *bytes; val; val = *++bytes)
         {
-    		const int temp = hash;
+        	const int temp = hash;
             hash = ((temp << 5) + temp) + val;
         }
         return hash;
