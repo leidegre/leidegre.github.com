@@ -65,6 +65,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	font-style: italic;
 }
 
+.disclaimer:before {
+    content: "\00bb";
+    font-size: 20px;
+}
+
 /*.post*/
 
 .post-date {
