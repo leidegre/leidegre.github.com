@@ -41,13 +41,9 @@
 
 	<div class="post">
 	
-    <div class="post-summary">
-	   {{ post.content | strip_html | newline_to_br | strip_newlines | replace: '<br />', '<br/>' | replace: '<br/><br/><br/>', '<br/><br/>' | truncatewords: 150 }}
-    </div>
-
-    <div class="post-footer">
-        <a href="{{ post.url }}">(click here to read the rest...)</a>
-    </div>
+    	<div class="post-summary">
+	   {{ post.content  }}
+    	</div>
 
 	</div>
 
