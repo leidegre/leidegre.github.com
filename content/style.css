@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 
 html, body {
-	border: none;
-	margin: 0;
+    border: none;
+    margin: 0;
 }
 
 body, tbody {
@@ -52,8 +52,8 @@ ol > li {
 }
 
 blockquote {
-    margin: auto 10px;
-    padding-left: 10px;
+    margin: 0;
+    padding: 10px 20px;
 }
 
 /*HTML 5 reset*/
