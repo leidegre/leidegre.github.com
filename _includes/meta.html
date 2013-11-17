@@ -15,6 +15,7 @@
       $('blockquote + blockquote', this).each(function() {
         var q = $(this);
         q.children().appendTo(q.prev());
+        q.remove();
       })
     })
   });
