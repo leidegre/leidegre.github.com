@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 html, body {
   border: none;
@@ -107,7 +107,8 @@ a.post-title:hover {
   background-color: #333;
   color: #999;
   font-style: normal;
-  font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 400;
 }
 
 .post blockquote > pre {
