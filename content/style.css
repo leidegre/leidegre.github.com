@@ -1,35 +1,35 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 
 html, body {
-    border: none;
-    margin: 0;
+  border: none;
+  margin: 0;
 }
 
 body, tbody {
-    font-family: "Georgia";
-    line-height: 1.6;
-    color: rgb(48, 48, 48);
+  font-family: "Georgia";
+  line-height: 1.6;
+  color: rgb(48, 48, 48);
 }
 
 h1, h2, h3 {
-    font-family: "Open Sans";
-    font-size:   16px;
-    font-weight: 600;
-    line-height: 2;
-    text-transform: uppercase;
+  font-family: "Open Sans";
+  font-size:   16px;
+  font-weight: 600;
+  line-height: 2;
+  text-transform: uppercase;
 }
 
 a {
-    color: #039;
+  color: #039;
 }
 
 a:hover {
-    color: #05f;
+  color: #05f;
 }
 
 ul {
-    margin: auto 10px;
-    padding: 0;
+  margin: auto 10px;
+  padding: 0;
 }
 
 ul > li {
@@ -38,47 +38,47 @@ ul > li {
 }
 
 ol {
-    margin: auto 20px;
-    padding: 0;
+  margin: auto 20px;
+  padding: 0;
 }
 
 ol > li {
-    margin: auto 10px;
-    padding: 0;
+  margin: auto 10px;
+  padding: 0;
 }
 
 * > li:not(:first-child):not(:last-child) {
-    margin: 0.5em 10px;
+  margin: 0.5em 10px;
 }
 
 blockquote {
-    margin: 0;
+  margin: 0;
 }
 
 /*HTML 5 reset*/
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
-    display: block;
+  display: block;
 }
 
 .disclaimer {
-	font-style: italic;
+  font-style: italic;
 }
 
 .disclaimer:before {
-    content: "\00bb";
-    font-size: 20px;
+  content: "\00bb";
+  font-size: 20px;
 }
 
 /*.post*/
 
 .post-date {
-	color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 a.post-title {
-    text-decoration: none;
-    color: rgb(248, 128, 32);
-    font-size: 26px;
+  text-decoration: none;
+  color: rgb(248, 128, 32);
+  font-size: 26px;
 }
 
 a.post-title:hover {
@@ -101,96 +101,95 @@ a.post-title:hover {
 }
 
 .post blockquote {
-    padding: 10px 20px;
-    border-left: solid 10px rgb(248, 128, 32);
-    border-left-color:; rgba(248, 128, 32, 0.75);
-    background-color: #333;
-    color: #999;
-    font-style: normal;
+  padding: 10px 20px;
+  border-left: solid 10px rgb(248, 128, 32);
+  border-left-color:; rgba(248, 128, 32, 0.75);
+  background-color: #333;
+  color: #999;
+  font-style: normal;
 }
 
 .post blockquote + blockquote {
-    padding: 10px 20px;
-    padding-top: 0px;
+  padding-top: 1px;
+  margin-top: -1px;
 }
 
-
 .post blockquote > pre {
-    background-color: #666;
-    color: #eee;
+  background-color: #666;
+  color: #eee;
 }
 
 .post-footer {
-	margin: 10px auto;
+  margin: 10px auto;
 }
 
 .post-footer a {
-	color: #999;
-	text-decoration: none;
+  color: #999;
+  text-decoration: none;
 }
 
 .post-footer a:hover {
-	color: #05f;
+  color: #05f;
 }
 
 @media screen and (min-width: 900px) {
 
-	body {
-	}
-
-	.page #wrapper {
-		margin: 0 auto;
-	}
-
-	.page #wrapper-main {
-		float: left;
-		width: 70%;
-	}
-
-	.page #wrapper-main-inner {
-		padding: 0 20px;
-	}
-
-	.page #wrapper-sidebar {
-		float: left;
-		width: 30%;
-	}
-
-	.page #wrapper-sidebar-inner {
-		padding-right: 20px;
-	}
-
-	/*.page-post*/
-
-	.page-post #wrapper {
-		margin: 0 auto;
-	}
-
-	.page-post #wrapper-main {
-		margin: 0 5%;
-	}
-
-	.page-post .widget-wrapper {
-		margin: 0 5%;
-	}
+  body {
+  }
+  
+  .page #wrapper {
+    margin: 0 auto;
+  }
+  
+  .page #wrapper-main {
+    float: left;
+    width: 70%;
+  }
+  
+  .page #wrapper-main-inner {
+   padding: 0 20px;
+  }
+  
+  .page #wrapper-sidebar {
+    float: left;
+    width: 30%;
+  }
+  
+  .page #wrapper-sidebar-inner {
+    padding-right: 20px;
+  }
+  
+  /*.page-post*/
+  
+  .page-post #wrapper {
+    margin: 0 auto;
+  }
+  
+  .page-post #wrapper-main {
+    margin: 0 5%;
+  }
+  
+  .page-post .widget-wrapper {
+    margin: 0 5%;
+  }
 
 }
 
 @media screen and (max-width: 900px) {
 
-	body {
-	}
-
-	#wrapper {
-		margin: 0 auto;
-	}
-
-	#wrapper-main {
-		margin: 0 5%;
-	}
-
-	.widget-wrapper {
-		margin: 0 5%;
-	}
+  body {
+  }
+  
+  #wrapper {
+    margin: 0 auto;
+  }
+  
+  #wrapper-main {
+    margin: 0 5%;
+  }
+  
+  .widget-wrapper {
+    margin: 0 5%;
+  }
 
 }
