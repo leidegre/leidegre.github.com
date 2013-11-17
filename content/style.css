@@ -99,14 +99,17 @@ a.post-title:hover {
 .post code {
 	font-family: 'Consolas' , 'Monospaced', 'Courier New';
 	font-size: 10pt;
-	background-color: #333;
-	color: #f0f0f0;
 }
 
 .post blockquote {
-    border-left: solid 10px rgb(224, 224, 224);
-    color: #808080;
+    border-left: solid 10px rgb(248, 128, 32);
+    color: #999;
     font-style: normal;
+}
+
+.post blockquote > pre {
+    background-color: #666;
+	color: #eee;
 }
 
 .post-footer {
