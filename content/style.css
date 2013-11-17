@@ -149,7 +149,7 @@ a.post-title:hover {
 @media screen {
 
   .page #wrapper-main-inner {
-    max-width: 100ch;
+    max-width: 80ch;
     margin: 0 auto;
   }
   
