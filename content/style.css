@@ -55,6 +55,16 @@ blockquote {
   margin: 0;
 }
 
+blockquote:before, blockquote:after {
+  content: "";
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /*HTML 5 reset*/
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
   display: block;
