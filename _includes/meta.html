@@ -8,4 +8,15 @@
 <link rel="alternate" type="application/atom+xml" title="blog.leidegren.se - Atom" href="/atom.xml" />
 <link rel="alternate" type="application/rss+xml" title="blog.leidegren.se - RSS" href="/rss.xml" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">
+  $(function() {
+    $('.post').each(function() {
+      // fix adjacent blockquotes
+      $('blockquote + blockquote', this).each(function() {
+        var q = $(this);
+        q.children().appendTo(q.prev());
+      })
+    })
+  });
+</script>
 <title>blog.leidegren.se</title>
