@@ -101,17 +101,12 @@ a.post-title:hover {
 }
 
 .post blockquote {
-  padding: 10px 20px;
+  padding: .1em 1em;
   border-left: solid 10px rgb(248, 128, 32);
   border-left-color:; rgba(248, 128, 32, 0.75);
   background-color: #333;
   color: #999;
   font-style: normal;
-}
-
-.post blockquote + blockquote {
-  padding-top: 1px;
-  margin-top: -1px;
 }
 
 .post blockquote > pre {
