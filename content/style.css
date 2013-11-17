@@ -111,11 +111,10 @@ a.post-title:hover {
 }
 
 .post blockquote {
-  padding: 1em 1.5em;
-  border-left: solid 10px rgb(248, 128, 32);
-  border-left-color: rgba(248, 128, 32, 0.75);
+  padding: 1em 2em;
+  border-left: solid 7px rgb(248, 128, 32);
   background-color: #333;
-  color: #999;
+  color: rgb(248, 128, 32);
   font-style: normal;
   font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 10pt;
@@ -123,7 +122,15 @@ a.post-title:hover {
 }
 
 .post blockquote > pre {
-  background-color: #666;
+  background-color: #444;
+  color: #eee;
+}
+
+.post blockquote > a {
+  color: rgba(248, 128, 32, 0.5);
+}
+
+.post blockquote > a:hover {
   color: #eee;
 }
 
