@@ -89,10 +89,10 @@ Internally we just call `snprintf` for each placeholder with the correct type sp
 > Remember, the general idea is to impose reasonable limits and write less bugs not to solve the general case. You can always argue that you should test for these bugs (or optionally use good tools for this) but honestly how many of you really test the fail condition of every external API call?
 
 >     if (!CreateFile(...))
-    {
-        Log("%s", GetLastError()); // Oops!
-        return FALSE;
-    }
+>     {
+>         Log("%s", GetLastError()); // Oops!
+>         return FALSE;
+>     }
 
 > Not saying that this isn't something that you shouldn't be testing but in my experience this is where the format bug will take down your program or worse be exploited and wreak havoc.
 
