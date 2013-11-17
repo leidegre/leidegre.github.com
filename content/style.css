@@ -98,7 +98,6 @@ a.post-title:hover {
   padding: 1em;
   border: none;
   border-radius: 4px;
-  max-width: 100ch;
   font-family: 'Consolas' , 'Monospaced', 'Courier New';
   font-size: 10pt;
   background-color: #333;
@@ -145,6 +144,15 @@ a.post-title:hover {
 
 .post-footer a:hover {
   color: #05f;
+}
+
+@media screen {
+
+  .page #wrapper-main-inner {
+    max-width: 100ch;
+    margin: 0 auto;
+  }
+  
 }
 
 @media screen and (min-width: 900px) {
