@@ -126,11 +126,11 @@ a.post-title:hover {
   color: #eee;
 }
 
-.post blockquote > a {
+.post blockquote a {
   color: rgba(248, 128, 32, 0.5);
 }
 
-.post blockquote > a:hover {
+.post blockquote a:hover {
   color: #eee;
 }
 
