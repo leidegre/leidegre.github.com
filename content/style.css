@@ -101,13 +101,14 @@ a.post-title:hover {
 }
 
 .post blockquote {
-  padding: .1em 1em;
+  padding: 0 1.5em;
   border-left: solid 10px rgb(248, 128, 32);
-  border-left-color:; rgba(248, 128, 32, 0.75);
+  border-left-color: rgba(248, 128, 32, 0.75);
   background-color: #333;
   color: #999;
   font-style: normal;
   font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 10pt;
   font-weight: 400;
 }
 
