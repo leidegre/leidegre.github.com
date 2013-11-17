@@ -111,7 +111,7 @@ a.post-title:hover {
 }
 
 .post blockquote {
-  padding: 0 1.5em;
+  padding: 1em 1.5em;
   border-left: solid 10px rgb(248, 128, 32);
   border-left-color: rgba(248, 128, 32, 0.75);
   background-color: #333;
