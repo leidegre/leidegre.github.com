@@ -24,8 +24,8 @@ Taking a closer look at the Lua C [source](http://www.lua.org/source/5.2/lparser
 
     pexp = pexp2 {pexp3}
     pexp2 = '(' exp ')' | Name
-    pexp3 = '.' Name | '[' exp ']' | ':' Name args | args
+    pexp3 = '.' Name | '[' exp ']' | ':' Name args | Name args
     
-Notice how each production here is preceeded by the consuming of an input token. In this form there can be no infinite loops (unless you introduce infinite input).
+Notice how each production here is preceeded by the consuming of an input token. In this form there can be no infinite loops (unless you introduce infinite input). Notice the order of evaluation. I couldn't tell how Lua resolved the perceived ambiguity between a function call and eval until I realized that a function call must be preeceeded by a name, which isn't at all clear from the BNF grammar.
 
-A clear cut case of declarative vs imperative. In this case I found the Lua 5.2 BNF grammar to be more difficult to understand.
+A clear cut case of declarative shenanigans (sometimes imperative is better). Even if the expressive nature of more declarative constructs are powerful and productive tools they are difficult to understand.
