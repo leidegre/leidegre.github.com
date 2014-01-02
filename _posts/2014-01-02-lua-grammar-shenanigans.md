@@ -20,7 +20,7 @@ Now, `var` and `pexp` may be reused throughout the grammar but rewriting them is
 
 > This sort of recursive grammar is really dubious. What we need here is a [non-left-recursive grammar](http://www.engr.mun.ca/~theo/Misc/exp_parsing.htm#rdp).
 
-Taking a closer look at the Lua C source you'll find this grammar (and not the one in the reference manual)
+Taking a closer look at the Lua C [source](http://www.lua.org/source/5.2/lparser.c.html#prefixexp) you'll find this grammar (and not the one in the reference manual)
 
     pexp = pexp2 {pexp3}
     pexp2 = '(' exp ')' | Name
