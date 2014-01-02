@@ -18,7 +18,7 @@ When you design your grammar, keep this in mind that you want to be able to dete
 
 Now, `var` and `pexp` may be reused throughout the grammar but rewriting them isn't necesarily impossible and I suppose this is what any decent parser generator will figure out to ensure that the parser isn't ambigous or never ending (like here).
 
-> This sort of recursive grammar is really dubious. What we need here is a [non-left-recursive grammar](http://www.engr.mun.ca/~theo/Misc/exp_parsing.htm#rdp).
+> This sort of recursive grammar is really dubious. What's more is that it's meant to convay that you can reapply it to allow the syntax such as `a.b["c"].d()` to be accapted. Is that easy to understand? What we need here is a [non-left-recursive grammar](http://www.engr.mun.ca/~theo/Misc/exp_parsing.htm#rdp).
 
 Taking a closer look at the Lua C [source](http://www.lua.org/source/5.2/lparser.c.html#prefixexp) you'll find this grammar (and not the one in the reference manual)
 
