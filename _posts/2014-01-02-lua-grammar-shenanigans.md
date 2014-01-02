@@ -26,4 +26,6 @@ Taking a closer look at the Lua C source you'll find this grammar (and not the o
     pexp2 = '(' exp ')' | Name
     pexp3 = '.' Name | '[' exp ']' | ':' Name args | args
     
+Notice how each production here is preceeded by the consuming of an input token. In this form there can be no infinite loops (unless you introduce infinite input).
+
 A clear cut case of declarative vs imperative. In this case I found the Lua 5.2 BNF grammar to be more difficult to understand.
