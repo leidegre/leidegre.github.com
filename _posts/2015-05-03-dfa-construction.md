@@ -51,9 +51,9 @@ We can implement the lexer ourselves and write the code. It's just a lot of boil
 
 The above code is a direct translation of the regular expression `string`. In total, we have three branches so it's reasonable to think that we have to come up with a minimal DFA with three states in it.
 
-  if (('A' <= ch) & (ch <= 'Z')) {
+    if (('A' <= ch) & (ch <= 'Z')) {
     // ...
-  }
+    }
 
 Then there's this, the equivalent `token1` code. How do we combine them?
 
@@ -147,6 +147,42 @@ What we have here are three distinct state machines that (when combined) represe
 
 Product machine construction is crazy. We get N-dimensional tuples as lookup keys and exponential growth of the number of states.
 
+The regular graph builder algorithm.
+
+Initially the graph is empty.
+
+First we add the `integer` token. It has one transition and one accept state.
+
+    a : ['0', '9'] => integer
+    a > a
+
+Then we add the `hex` token. This requires us to split the closed interval, 0-9 and add two transitions.
+
+    b :: '0' => integer
+    b -> a
+    b -> c
+    a :: ['0', '9'] => integer
+    a -> a
+    c :: 'x'
+    c -> ['0', '9'], ['A', 'F'] => hex
+    c -> c
+
+This all maps very well to code but it does not describe an execution. We need to render a state transition table to be able to run this.
+
+I guess we need an artifical example to actually get by this.
+
+    string 
+      = "\"" a : (^ "\"")* "\"" => string
+      ;
+
+The above expression cannot be translated into a transition table because it would blow up, exponentially. However, on closer inspection the expression only has two outcomes. Either the character is acceptable or it isn't. In this case that rule is inequality. In truth, it only defines two alphabet characters, acceptable and non-accpetable.
+
+Given s0 and `"\""` we enter s1, from here we apply a predicate to determine if next character is acceptable or not. If it is, we consume that character otherwise it's an error. If the character is `"\""` we transition to s2 which is our accept state.
+
+All in all, we've defined only two new symbols in our alphabet. Or we maintain two kinds of alphabets, the inclusive and exclusive. The inclusive alphabet is used for positive matches while the exclusive is used to perform negative matches where only illegal characters are found (everything else is a match).
+
+No, we just rewrite negation. With a fallback. `(^ "\"")*` -> a state transition to a fail state otherwise accept. However, it requires that the occurnace of the character is dependant on what comes before. Something which isn't easily known and we end up with the risk of making a complicated mess out of all this. The NFA approach is most likely that we want here.
+
 
 
 The hard part here is identifying an efficent state transition function.
@@ -154,6 +190,7 @@ The hard part here is identifying an efficent state transition function.
 Formalism is great but you have to deal with general case which can be annoying (and this is why we introduce constraints).
 
 
-
+# References
+- http://www.cs.cmu.edu/~flac/pdf/FSMAlgorithms-6up.pdf
 
 
