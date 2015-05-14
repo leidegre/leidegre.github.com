@@ -6,9 +6,9 @@ I've done this sort of thing in the past by hand and I find myself going back to
 
 > **Note:** for unfamiliar reader, lexical analysis is the step in which a sequence of characters gets grouped together as tokens. The actual parsing is then done based on a stream of tokens. Any sequence of characters that does not conform to a token is illegal.
 
-Much to my furstation I find that there's a gap between the formal mathematical definition and the thing that I can implement in code. I not sure why that is but to me, a lot of math as this ambighous mess (crazy, right?). I don't know why that is but part of it has to do with the fact that I never enjoyed math on it's own. Many mathematical constructions are just nonsensical to me but the code isn't. I'm much more comfortable reverse engineering an idea from code than math. Anyway, the formal definitions for these state machines are pretty much the same (small variations of the same concept).
+Much to my furstation I find that there's a gap between the formal mathematical definition and the thing that I can implement in code. I not sure why that is but to me, a lot of math is this ambighous mess (crazy, right?). I don't know why that is but part of it has to do with the fact that I never enjoyed math on it's own. Many mathematical constructions are just nonsensical to me but the code isn't. I'm much more comfortable reverse engineering an idea from code than math. Anyway, the formal definitions for these state machines are pretty much the same (small variations of the same concept).
 
-The formal definition of a is essentialy 5 things:
+The formal definition of a state machine is essentialy 5 things:
 
 - A finite set of states
 - A finite alphabet
