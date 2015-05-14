@@ -1,44 +1,42 @@
 A couple of things before I get started.
 
-parc is my parser compiler framework. It's a virtual execution environment for parc grammar files. parc takes a grammar file and text input and transforms this into a syntax tree. You can read more about it here.
+[parc](https://github.com/leidegre/parc) is my parser compiler framework. It's a virtual execution environment for parc grammar files. parc takes a grammar file and transforms text input into a syntax tree. You can read more about it [here](https://github.com/leidegre/parc/blob/master/docs/DESIGN.md).
 
-I'm atempting a more formal approach using deterministic finite automaton (DFA) construction to complete the lexical analysis.
+I've done this sort of thing in the past by hand and I find myself going back to this problem every now and then. This time, I'm atempting a more formal approach using deterministic finite automaton (DFA) construction for the lexical analysis and deterministic pushdown automaton (DPA) for recursive descent parsing.
 
-> **Note:** for unfamiliar reader, lexical analysis is the step in which a sequence of characters gets grouped together as tokens. The actual parsing is then done based on a stream of tokens. Any sequence of characters that does not form a token is illegal input.
+> **Note:** for unfamiliar reader, lexical analysis is the step in which a sequence of characters gets grouped together as tokens. The actual parsing is then done based on a stream of tokens. Any sequence of characters that does not conform to a token is illegal.
 
-As always, when I look at the formal definition I find that there's a gap between that and something which I can implement and the first problem I tend to run in to is representation.
+Much to my furstation I find that there's a gap between the formal mathematical definition and the thing that I can implement in code. I not sure why that is but to me, a lot of math as this ambighous mess (crazy, right?). I don't know why that is but part of it has to do with the fact that I never enjoyed math on it's own. Many mathematical constructions are just nonsensical to me but the code isn't. I'm much more comfortable reverse engineering an idea from code than math. Anyway, the formal definitions for these state machines are pretty much the same (small variations of the same concept).
 
-The formal definition of a DFA is simple, essentialy, you need 5 things:
+The formal definition of a is essentialy 5 things:
 
-- A set of states
-- An alphabet
+- A finite set of states
+- A finite alphabet
 - A transition function
-- A initial state
+- An initial state
 - A set of accept states
 
-But if we try to get practial, it all brakes down rather quickly.
+Math vs computation. All things math run in O(1), constant-time and disregards that fact that practical computation is based on a finite amount of bandwidth and/or memory. The theory of computation is in itself a mathematical model but the bigger the divide between the formal definiton and the practical computation the harder it is to utilize.
 
-For example, an alphabet is a convinent way of saying, we have a finite set of acceptable characters we know which they are and label them as such. OK, great. Let's define the alphabet universe as the Unicode code space. That ought to do. Only problem is that the math doesn't really care about space constraints we kinda do. As well soon see, even the simplest grammar will result in a state explosion too big for RAM (or otherwise rather inconvinent).
+Let's start with an example regarding the definition of the alphabet. An alphabet is a convinent way of saying, we have a finite set of acceptable characters. We know which these are and label each individually. OK, great. Let's define a finite universe as the Unicode code space (is this resonable? most programming languages use ASCII only). As long as the number of characters we use a finite we're good but as soon as we say, accept anything but this character we invite the entire Unicode code space into our transition table (that is, if we assume that we have a transition table that we can use with direct addressing). We're talking megabytes of overhead per transition in that table. The math disregards this problem entierly (I'm assuming that that's exactly the point from a mathematician's standpoint but I'd love to see more examples of math and practial computation work together).
 
-I'm also increddibly annoyed by all the examples that use only two or three states. I guess it's for the above reason. Anyway...
-
-If we stick to what's called regular language and define our lexer (the piece of code the does the lexical analysis) using it we can desribe tokens like this (I'm using the parc grammar here, you can look up that parc grammar grammar file for reference):
+Here's the first example using parc grammar (you can look up that [parc grammar grammar file](https://github.com/leidegre/parc/blob/master/parc.grammar) for reference)):
 
     token1 = "A" - "Z" ;
     
-Which is a single character token using the label `token1` that accepts any upper case ASCII letter. Now, this is easy becase we know here that our language only accepts these characters (limits the Unicode code space). But what about your typical delimited string?
+Which is a single character token using the label `token1` that accepts any upper case ASCII letter. Now, this is easy becase we know here that our language only accepts these characters but what about your typical delimited string?
 
     string = "\"" ( ^ "\"" ) * "\"" ;
 
-The above string example poses a very real practical problem. It specifies the allowed character set (or alphabet) as the inverse of the delimiter effectivly making the whole Unicode code space part of our alphabet. This is bad.
+This second example poses a very real practical problem. It specifies the allowed character set (or alphabet) as the inverse of the delimiter effectivly making the whole Unicode code space part of our alphabet. That's a lot of symbols.
 
-If we chose to represent our DFAs as transition tables we need to have the input alphabet in one dimension and each state in the other. In this case that's 1 MiB (of basically worthless state information) for each state.
+If we chose to represent our DFAs as transition tables we need to have the input alphabet in one dimension and each state in the other. In this case that's 1 MiB (of basically worthless state information) for each state (we'd ought to have very sparse transition tables).
 
 Math is easy becuase it allows you to simplify at any point. Running speed and memory constraints is of little concern when you just dictate the rules.
 
-Now, we can chose a arbitrary lambda function as the transition function and simply "abstract" the problem (which is what math does) but if we do so we end up with a linear search for the transition function and we lose the ability to anaylize the finite state nature of our lexical analysis.
+Now, we can chose an arbitrary lambda function as the transition function and simply "abstract" the problem (which is what math does) but if we do so we end up with a linear search for the transition function and we lose the ability to anaylize the finite state nature of our lexical analysis.
 
-I guess we need to talk a bit about the actual computation. Computations simply work better on a nice continous (linear) memory space and this is why transition tables are appealing (fast lookup). However, they fail to represnt negation expressions efficently.
+I guess we need to talk a bit about the actual computation. The computation models we use simply work better on a nice continous (linear) memory space and this is why transition tables are appealing (fast lookup). However, they fail to represnt negation expressions efficently.
 
 We can implement the lexer ourselves and write the code. It's just a lot of boiler plate code. If we do we can work backwards from the goal to construct the basic idea of the representation that we may want to do what we need here.
 
@@ -49,7 +47,7 @@ We can implement the lexer ourselves and write the code. It's just a lot of boil
       ch = next();
     }
 
-The above code is a direct translation of the regular expression `string`. In total, we have three branches so it's reasonable to think that we have to come up with a minimal DFA with three states in it.
+The above code is a direct translation of the regular expression `string`. In total, we have three branches so it's reasonable to think that we have to come up with a minimal DFA with at least three states in it.
 
     if (('A' <= ch) & (ch <= 'Z')) {
     // ...
@@ -80,7 +78,7 @@ Let's take the ECMAScript 5 NumericLiteral as an example (here in parc grammar).
       = "0" - "9"
       ;
       
-The actual definition of the Numeric Literals (section 7.8.3) is a bit verbose (I've left out some parts). Intrestingly, decimal numbers cannot have leading zeroes but integers can (tested in Chrome)!?.
+The actual definition of the Numeric Literals (section 7.8.3) is a bit verbose (I've left out some parts). Intrestingly, decimal numbers cannot have leading zeroes but integers can (tested in Chrome).
 
 The `hexIntegerLiteral` definition is also a nonsensical recursive mess (it's either that or supposed to signify repetition).
 
@@ -145,7 +143,7 @@ What we have here are three distinct state machines that (when combined) represe
       | "0x" ("0" - "9" | "A" - "F")+ => hex
       ;
 
-Product machine construction is crazy. We get N-dimensional tuples as lookup keys and exponential growth of the number of states.
+Product machine construction is crazy. We get N-dimensional tuples as lookup keys and exponential growth of the number of states (just saying that the state transition table representation is bad for combining state machines).
 
 The regular graph builder algorithm.
 
@@ -167,7 +165,7 @@ Then we add the `hex` token. This requires us to split the closed interval, 0-9 
     c -> ['0', '9'], ['A', 'F'] => hex
     c -> c
 
-This all maps very well to code but it does not describe an execution. We need to render a state transition table to be able to run this.
+This all maps very well to code but it does not describe how to dynamically execute this. We need to render a state transition table to be able to run this.
 
 I guess we need an artifical example to actually get by this.
 
@@ -175,20 +173,17 @@ I guess we need an artifical example to actually get by this.
       = "\"" a : (^ "\"")* "\"" => string
       ;
 
-The above expression cannot be translated into a transition table because it would blow up, exponentially. However, on closer inspection the expression only has two outcomes. Either the character is acceptable or it isn't. In this case that rule is inequality. In truth, it only defines two alphabet characters, acceptable and non-accpetable.
+The above expression cannot be translated into a transition table because it would blow up size wise. However, on closer inspection the expression only has two outcomes. Either the character is acceptable or it isn't. In this case that rule is inequality. In truth, it only defines two alphabet characters, acceptable and non-accpetable (our graph or tree representations can represent this exactly).
 
 Given s0 and `"\""` we enter s1, from here we apply a predicate to determine if next character is acceptable or not. If it is, we consume that character otherwise it's an error. If the character is `"\""` we transition to s2 which is our accept state.
 
-All in all, we've defined only two new symbols in our alphabet. Or we maintain two kinds of alphabets, the inclusive and exclusive. The inclusive alphabet is used for positive matches while the exclusive is used to perform negative matches where only illegal characters are found (everything else is a match).
+Somewhere around here I ran into issues with the DFA construction. Eventually I switched to NFA construction which was more straight forward but the only thing that happen computationally was that I created two new problems that needed sovling. The formal nature of this problem is a nice property but I can't roll with it effectivly. 
 
-No, we just rewrite negation. With a fallback. `(^ "\"")*` -> a state transition to a fail state otherwise accept. However, it requires that the occurnace of the character is dependant on what comes before. Something which isn't easily known and we end up with the risk of making a complicated mess out of all this. The NFA approach is most likely that we want here.
+I've already decided that parc is going to be deterministic. Thus any tokenization rule that is non-deterministic is illegal. And from experience writing lexers I know that its mostly all about non-overlapping intervals. parc tokenization rules map very well to a non-continous set of closed intervals. Sometimes the interval is the complement of some closed interval (negation) but otherwise this representation is computationally sound.
 
+Instead of doing NFA/DFA and minifaction we can construct a minimal decsion tree (and turn the lexical analysis into a seach problem). This operation is pretty much a linear ordeal and can the be used as a basis for further optimization.
 
-
-The hard part here is identifying an efficent state transition function.
-
-Formalism is great but you have to deal with general case which can be annoying (and this is why we introduce constraints).
-
+Running the lexiographic analysis from this representation is slow but straight forward. Computationally the constraints are very easy to reason about.
 
 # References
 - http://www.cs.cmu.edu/~flac/pdf/FSMAlgorithms-6up.pdf
