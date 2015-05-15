@@ -90,7 +90,7 @@ The `hexIntegerLiteral` definition is also a nonsensical recursive mess (it's ei
 
 Yeah, OK. Whatever. That's just downright confusing.
 
-> **Note:** I just learned that this is called [left recursion](http://en.wikipedia.org/wiki/Left_recursion). Left recursive grammars are more difficult to manage (for example, they cannot be parsed by *just* a recursive descent parser) but in my experience there is no need for left recursion. You simply rewrite your grammar in a right-recursive form which has a straight forward implementation.
+> **Note (added 2015-05-15):** I just learned that this is called [left recursion](http://en.wikipedia.org/wiki/Left_recursion). Left recursive grammars are more difficult to manage (for example, they cannot be parsed by *just* a recursive descent parser) but in my experience there is no need for left recursion. You simply rewrite your grammar in a right-recursive form which has a straight forward implementation.
 
 You'd never do that in a parc grammar. You'd write.
 
