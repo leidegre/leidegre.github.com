@@ -104,7 +104,7 @@ What if I simply followed along the edges (`tran_` pointer) in the control flow 
       Bind(node, map, &node_va);
       
       int tran_va;
-      if (Bind(node->tran_, &tran_va)) {
+      if (node->tran_ && Bind(node->tran_, &tran_va)) {
         Emit(node->tran_, map);
       }
       
