@@ -25,7 +25,7 @@ I wrote this grammar:
 
 Drew this control flow graph:
 
-![alt text](https://docs.google.com/drawings/d/1mrY-F6Afq4Ipbi-07Zp0MoJkSsSzjUlkmKt1H9cCkTA/pub?w=960&amp;h=600 "Recursive push/pop stack transitions")
+![alt text](https://docs.google.com/drawings/d/1mrY-F6Afq4Ipbi-07Zp0MoJkSsSzjUlkmKt1H9cCkTA/pub?w=680 "Recursive push/pop stack transitions")
 
 And packed everything in a data structure:
 
