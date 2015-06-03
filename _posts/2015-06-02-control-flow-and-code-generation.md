@@ -140,37 +140,43 @@ I implemented this algorithm to generate the byte code (ran it on paper) then to
 
 The result was something like this:
 
-    3:
-      return
-    PrimaryExpression:
-      accept   kTokenNumber
-      beq      3
-      jmp      4
-    5:
-      call     1
-      jmp      6
-    7:
-      return
-    6:
-      accept   kTokenRightParenthesis
-      beq      7
-      return
-    4:
-      accept   kTokenLeftParenthesis
-      beq      5
-      return
-    Expression:
-      call     PrimaryExpression
-      jmp      8
-    9:
-      call     Expression
-      jmp      10
-    10:
-      return
-    8:
-      accept   kTokenOperator
-      beq      9
-      return
+        3:
+          return
+        PrimaryExpression:
+          accept   kTokenNumber
+          beq      3
+          jmp      4
+        5:
+          call     Expression
+          jmp      6
+        7:
+          return
+        6:
+          accept   kTokenRightParenthesis
+          beq      7
+          jmp      8
+        8:
+          error
+        4:
+          accept   kTokenLeftParenthesis
+          beq      5
+          jmp      9
+        9:
+          return
+        Expression:
+          call     PrimaryExpression
+          jmp      10
+        11:
+          call     Expression
+          jmp      12
+        12:
+          return
+        10:
+          accept   kTokenOperator
+          beq      11
+          jmp      13
+        13:
+          return
 
 A complete mess, I know but the microprocessor don't care. What's intresting is that there's no explicit function definition. A function simply happens where it's used and is then referred to from everywhere else. What's even more intresting is that this byte code (or intermediate representation) can be rewritten in the form of the LLVM instruction set. If you do that, then we can ask LLVM to compile (and optimize) the byte code to whatever target needed.
 
