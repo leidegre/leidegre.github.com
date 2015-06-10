@@ -6,7 +6,7 @@ I've found it very helpful to approach the problem from both ends. I constantly 
 
 A quote from Albert Einstein commonly phrased: everything should be as simple as it can be, but not simpler. Though, I believe it is important to emphasize the *not simpler* part. Since this along with Occam's razor is often popularized as *the simplest solution is often the right one* which is just absurd.
 
-What follows here is me spending my evening trying to work out a representation in data along with an algorithm to reject ambiguous grammar but more importantly disambiguate production rules only appear ambigous but are infact not.
+What follows here is me spending my evening trying to work out a representation in data along with an algorithm to reject ambiguous grammar but more importantly disambiguate production rules that only appear ambigous but are infact not.
 
     a b
     a (b c)+
