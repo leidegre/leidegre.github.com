@@ -3,4 +3,4 @@ leidegre.github.com
 
 http://blog.leidegren.se
 
-This my GitHub page, here I write and publish things for my blog.
+This is my GitHub page, this is how I write/publish things for my blog.
