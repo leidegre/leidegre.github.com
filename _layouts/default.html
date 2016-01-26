@@ -4,7 +4,7 @@
 	{% include meta.html %}
 	{% include analytics.html %}
 </head>
-<body class="page">
+<body>
 
 <script type="text/javascript">
         
@@ -28,108 +28,25 @@
 </script>
 
 
-<div id="wrapper">
-<div id="wrapper-main">
-<div id="wrapper-main-inner">
+<div class="container">
+
+<div class="row">
+<div class="col-md-8">
 
 {% for post in site.posts limit 10 %}
 
-	<h2>
-		<span class="post-date">{{ post.date | date: "%e %B %Y" }}</span><br />
- 		<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-	</h2>
-
-	<div class="post">
-	
-    	<div class="post-summary">
-	   {{ post.content  }}
-    	</div>
-
-	</div>
+{% include post-template.html page=post content=post.content %}
 
 {% endfor %}
 
 </div>
-</div>
-<div id="wrapper-sidebar">
-<div id="wrapper-sidebar-inner">
+<div class="col-md-4">
 
-<div class="widget">
-
-    <div class="widget-wrapper">
-	
-        <h2>This is me</h2>
-    
-    </div>
-
-    <div style="text-align: center;">
-	<img style="width:100%;max-width:480px" src="http://en.gravatar.com/avatar/5be12a5a883043ee47443e93217504b6?s=480" alt="John Leidegren" title="John Leidegren" />
-    </div>
-
-    <div class="widget-wrapper">
-	
-        <p>
-	    Click <a href="https://docs.google.com/document/d/1__BZmpqlL_qmDRy33mTnNQJoyFnstNObz6NX7hShjsI/preview?pli=1">here</a> for a copy of my resume. 
-        There's also tonnes of information on this blog and in relation to my profile 
-        over at <a href="http://stackoverflow.com/users/58961/john-leidegren">StackOverflow</a> 
-        if you wanna find out even more about what I do.
-	    </p>
-	
-	    <p class="disclaimer">
-	    Also, please keep in mind; 
-	    the opinions expressed here are my own, not necessarily those of my employer.
-	    </p>
-
-    </div>
-
-</div>
-
-<div class="widget">
-    
-    <div class="widget-wrapper">
-
-    <h3>Organizational practices</h3>
-
-    <ul class="widget-links">
-        <li><a href="http://www.youtube.com/watch?v=2nK2sJqDe8w">Back to First Principles,<br />by Scott Chacon</a></li>
-	<li><a href="http://www.gdcvault.com/play/1012346/Concrete-Practices-to-be-a">Concrete Practices to Be a Better Leader</a></li>
-        <li><a href="http://www.gdcvault.com/play/1015694/Concrete-Practices-to-Be-a">Concrete Practices to Be a Better Leader:<br />Framing &amp; Intention</a></li>
-    </ul>
-
-    <h3>Something computer sciency</h3>
-
-    <ul class="widget-links">
-        <li><a href="http://yow.eventer.com/events/1004/talks/1028">Temporally Quaquaversal Virtual Nanomachine</a></li>
-    </ul>
-
-    <h3>Something humanitarian</h3>
-
-    <ul class="widget-links">
-        <li><a href="http://www.ted.com/index.php/talks/ken_robinson_says_schools_kill_creativity.html">Ken Robinson - Do schools kill creativity?</a></li>
-        <li><a href="http://www.ted.com/talks/sir_ken_robinson_bring_on_the_revolution.html">Ken Robinson - Bring on the learning revolution!</a></li>
-        <li><a href="http://www.ted.com/talks/jamie_oliver.html">Jamie Oliver's TED Prize wish:<br />Teach every child about food</a></li>
-    </ul>
-
-    </div>
-
-</div>
-
-<div class="widget">
-
-    <div class="widget-wrapper">
-
-	<h2></h2>
-
-	<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/John_Leidegren" data-widget-id="257513351624658946" width="500" data-chrome="noheader nofooter noborders noscrollbar transparent" data-tweet-limit="20">@John_Leidegren</a>
-    
-        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-
-    </div>
-
-</div>
+{% include sidebar.html %}
 
 </div>
 </div>
+
 </div>
 
 </body>
