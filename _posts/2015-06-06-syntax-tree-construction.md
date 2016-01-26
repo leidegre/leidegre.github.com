@@ -1,3 +1,7 @@
+---
+title: Syntax tree construction
+layout: post
+---
 
 This update will be about the syntax tree construction. In this case I'm trying to map out how to do it without using on return values. I put up a [working example in C#](https://gist.github.com/leidegre/12ecb24e588f97954762) real quick. Take a look.
 

@@ -1,3 +1,8 @@
+---
+title: Grammar & parser control flow
+layout: post
+---
+
 These blog posts are getting larger all the time. What I'm essentially doing here is a brain dump of my thought process. I blog about it because anyone doing the same would sure appreciate learning from what someone else did before them. Very rarely do I find that people blog about their work as it progresses. Think of this as my current  journal. It's very much a snapshot of what happens as the thing unfolds in my mind.
 
 I've found it very helpful to approach the problem from both ends. I constantly switch between what it would look like in code and what representation would be most suitable to solve this other problem over here. The design that I want needs to make the problem simpler to deal with otherwise it's a useless design. 

@@ -1,3 +1,8 @@
+---
+title: Control flow and code generation
+layout: post
+---
+
 I've been here before.
 
 What do you do when you want to write code to execute more code? How do you (in code) represent code that you can execute inside your other code and what does that look like? Essentially what we're talking about is this. How does a compiler take a text file and produce something that the microprocessor can execute and can we write that (as well as the microprocessor) in code?

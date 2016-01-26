@@ -1,3 +1,8 @@
+---
+title: DFA construction (or should I say minification?)
+layout: post
+---
+
 A couple of things before I get started.
 
 [parc](https://github.com/leidegre/parc) is my parser compiler framework. It's a virtual execution environment for parc grammar files. parc takes a grammar file and transforms text input into a syntax tree. You can read more about it [here](https://github.com/leidegre/parc/blob/master/docs/DESIGN.md).

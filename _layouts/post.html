@@ -4,29 +4,27 @@
 	{% include meta.html %}
 	{% include analytics.html %}
 </head>
-<body class="page-post">
+<body>
 
-<div id="wrapper">
-<div id="wrapper-main">
-<div id="wrapper-main-inner">
+<div class="container">
 
-	<p><a href="/">back</a></p>
+<div class="row">
+<div class="col-md-8">
 
-	<h2>
-		<span class="post-date">{{ page.date | date: "%e %B %Y" }}</span><br />
-		<a class="post-title" href="{{ url }}">{{ page.title }}</a>
-	</h2>
-
-	<div class="post">
-
-	{{ content }}
-	
-	</div>
-	
-	<p><a href="/">back</a></p>
+	{% include post-template.html page=page content=content %}
 
 </div>
 </div>
+
+<div class="row">
+<div class="col-md-8">
+<p>
+    <a class="btn btn-primary" href="/" onclick="history.go(-1);return false">back</a>
+    <a class="btn btn-default" href="https://github.com/leidegre/leidegre.github.com/blob/master/{{ page.path }}" title="Fork this blog post on GitHub (and submit a pull request)">edit</a>
+</p>
+</div>
+</div>
+
 </div>
 
 </body>
