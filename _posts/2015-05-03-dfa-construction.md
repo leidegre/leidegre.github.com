@@ -193,6 +193,6 @@ Instead of doing NFA/DFA and minifaction we can construct a minimal decsion tree
 Running the lexiographic analysis from this representation is slow but straight forward. Computationally the constraints are very easy to reason about.
 
 # References
-- http://www.cs.cmu.edu/~flac/pdf/FSMAlgorithms-6up.pdf
+- http://www.cs.cmu.edu/~./FLAC/pdf/FSMAlgorithms-6up.pdf
 
 
