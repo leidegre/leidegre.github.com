@@ -194,5 +194,6 @@ Running the lexiographic analysis from this representation is slow but straight 
 
 # References
 - http://www.cs.cmu.edu/~./FLAC/pdf/FSMAlgorithms-6up.pdf
+- http://www.cs.nuim.ie/~jpower/Courses/Previous/parsing/node9.html
 
 
