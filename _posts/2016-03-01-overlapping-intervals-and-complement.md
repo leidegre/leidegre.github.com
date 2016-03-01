@@ -1,6 +1,6 @@
 ---
 title: Overlapping intervals and complement
-lead: As I was researching deterministic finite state machines as a method of lexical analysis I noticed that the superset construction worked very poorly with large set of symbols, which is the result of negation within the Unicode code space. These things are in the end, implemented in the form of a search problem with intervals. Modelling this using intervals we end up with a practical set of symbols and not state tables having 1,114,112 code points.
+lead: As I was researching deterministic finite state machines as a method of lexical analysis I noticed that the superset construction worked very poorly with large set of symbols, which is the result of negation within the Unicode codespace. These things are in the end, implemented in the form of a search problem with intervals. Modelling this using intervals we end up with a practical set of symbols and not state tables having 1,114,112 code points.
 layout: post
 ---
 
