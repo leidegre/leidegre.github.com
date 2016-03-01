@@ -8,14 +8,7 @@ We're going to use the following `[a,b]` notation to denote a closed interval be
 
 We're also going to need the complement of an interval. We denote this as `]a, b[` and it is the equivalent of `x < a && b < x`. Note how the complement is an open interval and that we don't include `a` and `b` in the interval. Effectivly, there can be no overlap between an interval `[a,b]` and it's complement `]a,b[`
 
-<div class="panel panel-primary">
-<div class="panel-heading"><strong>NOTE</strong></div>
-<div class="panel-body">
-
-> While an interval can span a great *distance* there is no such requirement as long as `a <= b` holds, we're good. This implies that we can define an interval of a single step as `[a,a]`.
-
-</div>
-</div>
+While an interval can span a great *distance* there is no such requirement as long as `a <= b` holds, we're good. This implies that we can define an interval of a single step as `[a,a]`.
 
 # Why the complement is important
 
