@@ -59,5 +59,5 @@ Continuing down this path we would eventually see that we could replace the comp
 
 Cool.
 
-I put up a [JSFiddle](https://jsfiddle.net/2w57zoa4/1/)  to test this out, if you wanna take a closer look at my atempt of capturing this appraoch in terms of intervals.
+I put up a [JSFiddle](https://jsfiddle.net/2w57zoa4/2/)  to test this out, if you wanna take a closer look at my atempt of capturing this appraoch in terms of intervals.
 
