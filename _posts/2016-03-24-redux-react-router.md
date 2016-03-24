@@ -9,7 +9,7 @@ To my knowledge there are two packages that we could go for.
 * [react-router-redux](https://github.com/reactjs/react-router-redux)
 * [redux-router](https://github.com/acdlite/redux-router)
 
-I've opted to use `redux-router` and here's why.
+I've opted to use *only* the history API from `redux-router` and here's why.
 
 The only thing I really care about is the history API. It allows us to dispatch actions that change the URL. Given the below routes configuration note that we can omit component definitions as we decend down our path topology.
 
