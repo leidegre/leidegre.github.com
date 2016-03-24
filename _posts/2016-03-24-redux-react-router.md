@@ -38,6 +38,10 @@ const routes = {
 }
 ~~~
 
+If you take a close look at the above configuration you'll notice that either the `component` or `path` definition is optional. This permitts instansiation of any number of components ot occur as we decend a particular route configuration. Some of the components that we create may serve as only handlers for location information and navigation events not necessarily rendering of anything in particular.
+
+## Redux URL action creators
+
 The effectivly allows us to specify a component whose responsbility is to soley to handle the URL information. There are two reasons for why we would do this.
 
 * If you want to send a link to your application (or page reload)
