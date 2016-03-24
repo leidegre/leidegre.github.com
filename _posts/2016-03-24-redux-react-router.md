@@ -28,6 +28,7 @@ const routes = {
       ]
     },
     {
+      // <-- note the abscence of a path definition here!
       component: Inbox,
       childRoutes: [
         { path: 'messages/:id', component: Message }
