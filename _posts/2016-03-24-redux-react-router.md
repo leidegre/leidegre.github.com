@@ -11,8 +11,6 @@ To my knowledge there are two packages that we could go for.
 
 I've opted to use *only* the history API from `redux-router` and here's why.
 
-The only thing I really care about is the history API. It allows us to dispatch actions that change the URL. Given the below routes configuration note that we can omit component definitions as we decend down our path topology.
-
 ~~~
 const routes = {
   path: '/',
@@ -38,19 +36,19 @@ const routes = {
 }
 ~~~
 
-If you take a close look at the above configuration you'll notice that either the `component` or `path` definition is optional. This permitts instansiation of any number of components ot occur as we decend a particular route configuration. Some of the components that we create may serve as only handlers for location information and navigation events not necessarily rendering of anything in particular.
+If you take a close look at the above configuration you'll notice that either the `component` or `path` was omitted in one place or another. This allows for any number of components to be created as we decend a particular route. Some of the components that we create may serve as only handlers for location information and navigation events.
 
-## Redux URL action creators
+In a way, it would be a mistake to miss out on this feature and only mount components that render something at each route.
 
-The effectivly allows us to specify a component whose responsbility is to soley to handle the URL information. There are two reasons for why we would do this.
+## Redux URL actions
 
-* If you want to send a link to your application (or page reload)
-* If you want to synchronize URL state and application state on navigation
+To navigate in a single-page application we need access to the browser history API. We don't want to pass around that object and instead use the history API middleware from the `redux-router` package for this. This way we can dispatch actions that change the URL state and in turn trigger react-router to update our application.
 
-To be able to do this through Redux we can invent the concept of URL [action creators](http://redux.js.org/docs/basics/Actions.html) which reverse engineer URLs based on current application state. To be able to do this we require the excellent [redux-thunk](https://github.com/gaearon/redux-thunk) package.
+To be able to do this we require the excellent [redux-thunk](https://github.com/gaearon/redux-thunk) package.
 
 ~~~
 import { push } from 'redux-router'
+
 export function myUrlActionCreator({params}) {
   return (dispatch, getState) => {
    // immediately sync with store
