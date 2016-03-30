@@ -22,7 +22,10 @@ const routes = {
       path: 'inbox',
       component: Inbox,
       childRoutes: [
-        { path: 'messages/:id' } // <-- note the abscence of a component definition here!
+        { 
+          path: 'messages/:id', // <-- note the abscence of a component definition here!
+          onEnter: ({ params }, replace) => replace(`/messages/${params.id}`) // rewrite/redirect...
+        } 
       ]
     },
     {
