@@ -39,3 +39,15 @@ Go only has two access modifiers. Package private and public. These are implicit
 
 A test file is simply a Go file that ends with `_test.go` these files are distributed along the rest of the package source files and will have access to package private identifiers. This makes testing easier because you can always access stuff in your package from your tests.
 
+# It's perfectly OK to return the address of a local variable
+
+WAT!? 
+
+The real story here is the way Go [evolved](https://scvalex.net/posts/29/). At the very begining, all local varibles were actually allocated on the heap. In [late 2011](https://groups.google.com/forum/#!msg/golang-nuts/TN8mhQJBlZ8/5GCScT8jUigJ), the Go compiler implemented escape analysis, which improved performance by placing variables on the stack _instead of the heap_ when it was safe to do so.
+
+The point is, Go is type safe. You can't have dangling pointer errors in Go (as long as you stay away from the `unsafe` package).
+
+# The Go garbage collector is a very low latency GC
+
+It wasn't always the case but as of version 1.5, [this changed](https://youtu.be/aiv1JOfMjm0?t=18m14s). Additional improvments and extrapolated results can be found [here](http://stackoverflow.com/a/31686469). I think [this](https://twitter.com/brianhatfield/status/692778741567721473) is really impressive and could open up Go to game development were longer pauses are unacceptable.
+
