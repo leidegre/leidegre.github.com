@@ -24,11 +24,18 @@ Write the code to get it working, don't go for cleaver tricks, just get to work 
 
 It's a good thing that Go does NOT have all of the feature of some other promminent modern programming languages, instead Go has a lot more in common with C. You can read more about this in the section [Changes from C](https://golang.org/doc/faq#change_from_c) from the offical Go FAQ.
 
-Ultimatly, these constraints will make Go programms run really fast and probably faster than C++, C#/Java and D programs.
+Ultimatly, I'm confident that these constraints will make Go programms run really fast and probably faster than C++, C#/Java and D programs.
 
 # Less clutter
 
 Go does something which I've thought of myself as well and that's to rely on convention for certain stuff. For example, instead of having accessability/visibility modifiers such as private and public, Go does not allow you to access members of other packages if they start with a lower case letter. If you want a member to be public it has to start with an upper letter.
 
-# Zero-cost abstractions
+# No class private access modifier makes testing simple
+
+Go only has two access modifiers. Package private and public. These are implicit.
+
+- An identifier begining with a lower case letter is only accessible from within the package
+- An identifier begining with a upper case letter is accessible from any package
+
+A test file is simply a Go file that ends with `_test.go` these files are distributed along the rest of the package source files and will have access to package private identifiers. This makes testing easier because you can always access stuff in your package from your tests.
 
