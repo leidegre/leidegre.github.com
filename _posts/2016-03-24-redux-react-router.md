@@ -41,7 +41,7 @@ const routes = {
 
 <img src="https://docs.google.com/drawings/d/1-mDHl_SZsvfXZC52cCcV8a2Qv33u9DQj-VO3H1vMr80/pub?w=960&amp;h=720" class="img-responsive" title="Drawing of reaact router topology" />
 
-_If you are wondering the way `react-router` builds the component tree is from inside and out using the `reduceRight` function_
+_If you are wondering the way `react-router` builds the component tree is from inside and out using the `reduceRight` function._
 
 If you take a close look at the above configuration you'll notice that either the `component` or `path` was omitted in one place or another. This allows for any number of components to be created as we decend a particular route. Some of the components that we create may serve as only handlers for location information and navigation events.
 
@@ -92,10 +92,14 @@ componentWillMount() {
 ~~~
 componentWillMount() {
   const { state } = this.props.location
-  // no need to parse query, the information we need was passed in state (intent SHOULD be clear)
-  // there's also no need to sync state because we already did that in the URL action creators
-  // the only thing that needs to happen here is possibly a dispatch of some action based on the intent
-  // of the route, you SHOULD be able to parse this from the state that you passed with your navigation event
+  // No need to parse query. The information we need 
+  // was passed in state (intent SHOULD be clear).
+  // There's also no need to sync state because we 
+  // already did that in the URL action creators.
+  // The only thing that needs to happen here is possibly 
+  // a dispatch of some action based on the intent
+  // of the route, you SHOULD be able to parse this from 
+  // the state that you passed with your navigation event.
 }
 ~~~
 
