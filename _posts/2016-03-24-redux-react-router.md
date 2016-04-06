@@ -39,7 +39,7 @@ const routes = {
 }
 ~~~
 
-![Drawing of reaact router topology](https://docs.google.com/drawings/d/1-mDHl_SZsvfXZC52cCcV8a2Qv33u9DQj-VO3H1vMr80/pub?w=960&amp;h=720)
+<img src="https://docs.google.com/drawings/d/1-mDHl_SZsvfXZC52cCcV8a2Qv33u9DQj-VO3H1vMr80/pub?w=960&amp;h=720" class="img-responsive" title="Drawing of reaact router topology" />
 
 _If you are wondering the way `react-router` builds the component tree is from inside and out using the `reduceRight` function_
 
