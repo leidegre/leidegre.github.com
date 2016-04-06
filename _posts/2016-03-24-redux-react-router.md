@@ -1,6 +1,6 @@
 ---
 title: Redux & react-router
-lead: Redux is a library for managing application state, react-router is a library for building single-page applications in React.js when you try to combine these things you'll run into a couple of issues. I've outlined what those issues are and how I've chosen to deal with them here.
+lead: Redux is a library for managing application state, react-router is a library for building single-page applications in React.js when you try to combine these you may run into problems. I've outlined what those are and how I've chosen to deal with them here.
 layout: post
 ---
 
@@ -9,7 +9,7 @@ To my knowledge there are two packages that we could go for.
 * [react-router-redux](https://github.com/reactjs/react-router-redux)
 * [redux-router](https://github.com/acdlite/redux-router)
 
-I've opted to use *only* the history API from `redux-router` and here's why.
+I've opted to use *only* the history API from `react-router-redux` and here's why.
 
 ~~~
 const routes = {
@@ -39,13 +39,17 @@ const routes = {
 }
 ~~~
 
+![Drawing of reaact router topology](https://docs.google.com/drawings/d/1-mDHl_SZsvfXZC52cCcV8a2Qv33u9DQj-VO3H1vMr80/pub?w=960&amp;h=720)
+
+_If you are wondering the way `react-router` builds the component tree is from inside and out using the `reduceRight` function_
+
 If you take a close look at the above configuration you'll notice that either the `component` or `path` was omitted in one place or another. This allows for any number of components to be created as we decend a particular route. Some of the components that we create may serve as only handlers for location information and navigation events.
 
-In a way, it would be a mistake to miss out on this feature and only mount components that render something at each route.
+It would be a mistake to miss out on this feature and only mount components that render something at each route.
 
 ## Redux URL actions
 
-To navigate in a single-page application we need access to the browser history API. We don't want to pass around that object and instead use the history API middleware from the `redux-router` package for this. This way we can dispatch actions that change the URL state and in turn trigger react-router to update our application.
+To navigate in a single-page application we need access to the browser history API. We don't want to pass around that object and instead use the history API Redux middleware from the `react-router-redux` package for this. This way we can dispatch actions that change the URL state and in turn trigger `react-router` to update our application.
 
 To be able to do this we require the excellent [redux-thunk](https://github.com/gaearon/redux-thunk) package.
 
@@ -97,6 +101,4 @@ componentWillMount() {
 
 Additionally there is one thing we could do in the spirit of higher-order components and testability and that's to decouple the react-router property injection from our components.
 
-All we really need to do here is to either parse URL information or dispatch an action based on route state information. We can create a decorator function to provide this logic and configure this our `routes.js` file. I think it makes sense to keep the things that depend on each other as close together as possible.
-
-TODO: need a diagram that shows how the react-router works with deep links.
+All we really need to do here is to either parse URL information or dispatch an action based on route state information. We can create a decorator function to provide this logic and configure this our `routes.js` file (or whereever you store your routes). I think it makes sense to keep the things that depend on each other as close together as possible.
