@@ -4,13 +4,13 @@ lead: I've been asking myself what's next in programming languages and while the
 layout: post
 ---
 
-# Go programs are built from source there are no precompiled libraries
+# Go programs are built from source
 
-I think the first clue was the way you setup your workspace. Your workspace is a collection of repositories that you tend to use it's not necessarily tied to what your doing at the moment. As such, the idea of a workspace is bigger than a single project. This is nice when there's that one library that you find yourself going back to. You don't have to jump through a lot of hoops, you just say import that package and it will reflect a single instance of that library across your stuff. 
+I think the first clue was the way you are encuraged to setup your workspace. Your workspace is a collection of repositories that you tend to use and it's not necessarily tied to what your doing at the moment. As such, the idea of a workspace is bigger than a single project. This is nice when there's that one library that you find yourself going back to. You don't have to jump through a lot of hoops, you just say import that package and it will reflect a single instance of that library across your stuff. 
 
-It also echos the sentiment that Google (and apparently [Facebook](http://duckrowing.com/2014/05/02/one-big-source-tree/) seems to be using) with one big source tree. The Go workspace setup really is the embodiment of one big source tree.
+Google (and now [Facebook](http://duckrowing.com/2014/05/02/one-big-source-tree/)) have one big source tree. The Go workspace setup really is an embodiment of this idea of one big source tree.
 
-Secondly, if you do distribute by source it's very easy to peek into details about what libraries you are depending on are doing (or maybe not doing). To some degree and prefer source over documentation, it depends on who is writing the documentation but it gets verbose, ambigous and old really fast.
+If you always distribute and build from source by default, it's very easy to peek into details of a package and figure out exactly what the package is doing (or maybe not doing). You can change things very easily to test stuff. To some degree, I prefer source over documentation but it depends on who is writing the documentation. Both documentation and code has a tendency to verbose but only documentation can be ambigous. If the source is the documentation it is a good thing that Go is terse.
 
 # Go is simpler
 
