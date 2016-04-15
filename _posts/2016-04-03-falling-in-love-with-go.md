@@ -35,6 +35,8 @@ Ultimatly, I'm confident that these constraints will make Go programms run reall
 
 Go does something which I've thought of myself as well and that's to rely on convention for certain stuff. For example, instead of having accessability/visibility modifiers such as private and public, Go does not allow you to access members of other packages if they start with a lower case letter. If you want a member to be public it has to start with an upper letter.
 
+Someone pointed out that this design choice would made chaning the access modifier for a field more difficult since it would involve changes to a lot of places in the code. While this is true the route Go took also made it possible for tools to do this to exist. The language was designed to allow the creation of tools. One such tool is gofix, which is a tool that can rewrite legacy Go code to new versions and I think the idea here is a novel one. Instead of creating the best language with support for everything we create a simple language the can be supported by tooling. Let's make it easier to write tools instead. I like this approach.
+
 # No class private access modifier makes testing simple
 
 Go only has two access modifiers. Package private and public. These are implicit.
