@@ -4,7 +4,9 @@ lead: I've been asking myself what's next in programming languages and while the
 layout: post
 ---
 
-# Go programs are built from source
+# Go programs compile to native binaries but are built and distributed by source (no shared objects or static libraries)
+
+^^ citation needed ^^
 
 I think the first clue was the way you are encuraged to setup your workspace. Your workspace is a collection of repositories that you tend to use and it's not necessarily tied to what your doing at the moment. As such, the idea of a workspace is bigger than a single project. This is nice when there's that one library that you find yourself going back to. You don't have to jump through a lot of hoops, you just say import that package and it will reflect a single instance of that library across your stuff. 
 
@@ -14,8 +16,9 @@ If you always distribute and build from source by default, it's very easy to pee
 
 # Go is simpler
 
-Go is simpler because Go has less stuff.
+When I first started out programming in C I was struck by how everything I've grown accustomed to in many modern programming langauges were no longer readily available to me. With this came a sense of relief. I no longer had to concern myself with choice. At first I was a bit perplexed but now I feel as if too much choice is a really bad thing and that we need constraints. 
 
+Rob Pike has made this talk which I think makes some excellent points about Go and simplicity https://www.youtube.com/watch?v=rFejpH_tAHM 
 I think I had more fun as a programmer when I was younger. I don't remember being this distracted by all the shiny stuff, I believe a got more stuff done back then as well.
 
 This [blog post](https://deplinenoise.wordpress.com/2014/07/30/does-experience-slow-you-down/) by [@deplinenoise](https://twitter.com/deplinenoise) outlines the issue perfectly. My revelation came after watching Chet Faliszek's [talk](https://youtu.be/tdwzvdZFxVM?t=8m1s) at the 2012 Eurogamer Expo.
@@ -51,7 +54,7 @@ The point is, Go is type safe. You can't have dangling pointer errors in Go (as 
 
 # Go isn't C and while introp with C is easy C programs are not portable
 
-However, there's an assembler.
+However, there's an extensible assembler and adding support for new architecures is (what I've heard) comparativly staright forward.
 
 # The Go garbage collector is a very low latency GC
 
