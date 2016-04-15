@@ -14,7 +14,9 @@ Google (and now [Facebook](http://duckrowing.com/2014/05/02/one-big-source-tree/
 
 If you always distribute and build from source by default, it's very easy to peek into details of a package and figure out exactly what the package is doing (or maybe not doing). You can change things very easily to test stuff. To some degree, I prefer source over documentation but it depends on who is writing the documentation. Both documentation and code has a tendency to verbose but only documentation can be ambigous. If the source is the documentation it is a good thing that Go is terse.
 
-# Go is simpler
+# Go is simple
+
+...not that it won't turn your head around or make you go, hu? But in it's nature Go is very simple.
 
 When I first started out programming in C I was struck by how everything I've grown accustomed to in many modern programming langauges were no longer readily available to me. With this came a sense of relief. I no longer had to concern myself with choice. At first I was a bit perplexed but now I feel as if too much choice is a really bad thing and that we need constraints. 
 
