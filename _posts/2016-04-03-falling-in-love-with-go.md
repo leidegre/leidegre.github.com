@@ -16,7 +16,7 @@ If you always distribute and build from source by default, it's very easy to pee
 
 # Go is simple
 
-...not that it won't turn your head around or make you go, hu? But in it's nature Go is very simple.
+...not that it won't turn your head around or make you go, hu? But in it's nature, Go is very simple.
 
 When I first started out programming in C I was struck by how everything I've grown accustomed to in many modern programming langauges were no longer readily available to me. With this came a sense of relief. I no longer had to concern myself with choice. At first I was a bit perplexed but now I feel as if too much choice is a really bad thing and that we need constraints. 
 
