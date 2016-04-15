@@ -62,3 +62,12 @@ However, there's an extensible assembler and adding support for new architecures
 
 It wasn't always the case but as of version 1.5, [this changed](https://youtu.be/aiv1JOfMjm0?t=18m14s). Additional improvments and extrapolated results can be found [here](http://stackoverflow.com/a/31686469). I think [this](https://twitter.com/brianhatfield/status/692778741567721473) is really impressive and could open up Go to game development were longer pauses are unacceptable.
 
+# Go does not have a generic type system
+
+No it does not. What it does have is slices. A slice is a typed list, it's not just an array which is what I find perculiar. Going into this I was surprised to find that Go slices have a length and capacity. The reason for this is that a slice can double as an array list.
+
+The built-in append function will also dynamically resize and grow slices as needed.
+
+There's no need for a generic list of type T. The closest we will ever come to something like this is a slice of some interface. This slice will be able to store anything that satisfies the protocol defined by the interface. This I think is the most bizare thing about Go and it has my head all turned around. Not that I don't get how it works but I don't yet have a handle on how to design my software with it. Something are easy, other things not so much.
+
+For example, you can't really build intresting type hierarcies in Go. You gotta through all that out and think of something else.
