@@ -49,6 +49,10 @@ The real story here is the way Go [evolved](https://scvalex.net/posts/29/). At t
 
 The point is, Go is type safe. You can't have dangling pointer errors in Go (as long as you stay away from the `unsafe` package).
 
+# Go isn't C and while introp with C is easy C programs are not portable
+
+However, there's an assembler.
+
 # The Go garbage collector is a very low latency GC
 
 It wasn't always the case but as of version 1.5, [this changed](https://youtu.be/aiv1JOfMjm0?t=18m14s). Additional improvments and extrapolated results can be found [here](http://stackoverflow.com/a/31686469). I think [this](https://twitter.com/brianhatfield/status/692778741567721473) is really impressive and could open up Go to game development were longer pauses are unacceptable.
