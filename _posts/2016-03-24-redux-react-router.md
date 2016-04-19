@@ -105,4 +105,41 @@ componentWillMount() {
 
 Additionally there is one thing we could do in the spirit of higher-order components and testability and that's to decouple the react-router property injection from our components.
 
+~~~
+function routeParamsHandler(onInjectedRoutePropsChanged) {
+  var RouteParamsHandler = class extends Component {
+    static propTypes() {
+      return {
+        children: React.PropTypes.element.isRequired
+      }
+    }
+    componentWillMount() {
+      onInjectedRoutePropsChanged && onInjectedRoutePropsChanged(this.props.dispatch, this.props)
+    }
+    componentWillReceiveProps(nextProps) {
+      onInjectedRoutePropsChanged && onInjectedRoutePropsChanged(nextProps.dispatch, nextProps)
+    }
+    render() {
+      return React.Children.only(this.props.children)
+    }
+  }
+  return connect()(RouteParamsHandler)
+}
+~~~
+
+This we get to define both how to match and map route properties into the store in one go.
+
+~~~
+const routes = [
+  ...,
+  {
+    path: 'url/:paramVal',
+    component: routeParamsHandler((dispatch, props) => {
+      dispatch(doSomething({ val: props.routeParams.paramVal }))
+    }),
+    indexRoute: { component: SomeOtherComponent }
+  }
+]
+~~~
+
 All we really need to do here is to either parse URL information or dispatch an action based on route state information. We can create a decorator function to provide this logic and configure this our `routes.js` file (or whereever you store your routes). I think it makes sense to keep the things that depend on each other as close together as possible.
