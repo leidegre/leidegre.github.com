@@ -73,3 +73,7 @@ The built-in append function will also dynamically resize and grow slices as nee
 There's no need for a generic list of type T. The closest we will ever come to something like this is a slice of some interface. This slice will be able to store anything that satisfies the protocol defined by the interface. This I think is the most bizare thing about Go and it has my head all turned around. Not that I don't get how it works but I don't yet have a handle on how to design my software with it. Something are easy, other things not so much.
 
 For example, you can't really build intresting type hierarcies in Go. You gotta through all that out and think of something else.
+
+# Making sensible trade offs for performance
+
+http://stackoverflow.com/a/9644797/58961
