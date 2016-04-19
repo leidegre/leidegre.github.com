@@ -54,7 +54,7 @@ To navigate in a single-page application we need access to the browser history A
 To be able to do this we require the excellent [redux-thunk](https://github.com/gaearon/redux-thunk) package.
 
 ~~~
-import { push } from 'redux-router'
+import { push } from 'react-router-redux'
 
 export function myUrlActionCreator({params}) {
   return (dispatch, getState) => {
@@ -106,7 +106,7 @@ componentWillMount() {
 Additionally there is one thing we could do in the spirit of higher-order components and testability and that's to decouple the react-router property injection from our components.
 
 ~~~
-function routeParamsHandler(onInjectedRoutePropsChanged) {
+function routeParamsHandler(routePropsChanged) {
   var RouteParamsHandler = class extends Component {
     static propTypes() {
       return {
@@ -114,10 +114,10 @@ function routeParamsHandler(onInjectedRoutePropsChanged) {
       }
     }
     componentWillMount() {
-      onInjectedRoutePropsChanged && onInjectedRoutePropsChanged(this.props.dispatch, this.props)
+      routePropsChanged && routePropsChanged(this.props.dispatch, this.props)
     }
     componentWillReceiveProps(nextProps) {
-      onInjectedRoutePropsChanged && onInjectedRoutePropsChanged(nextProps.dispatch, nextProps)
+      routePropsChanged && routePropsChanged(nextProps.dispatch, nextProps)
     }
     render() {
       return React.Children.only(this.props.children)
