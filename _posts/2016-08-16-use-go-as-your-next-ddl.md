@@ -1,5 +1,5 @@
 ---
-title: Using Go as a DDL
+title: Use Go (#golang) as your next DDL
 lead: Go's compiler infrastructure is already exposed as a set of packages and it's really easy to just parse and bunch of files and generate some code. With that in mind, if we wanted to create a DDL we might as well just use Go syntax.
 layout: post
 ---
