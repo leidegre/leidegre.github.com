@@ -179,4 +179,4 @@ The Azure resource explorer ties together these two pices of information to buil
 
 An overview of the things outline here for the Azure portal can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services).
 
-A final note, the APIs appear to have changed quite a bit over the years. If you look at the resource manager APIs from 2 years ago (2015 era) those are vastly different from the APIs we have now (2017). I have found the more recent APIs to be much better organized and easier to navigate, the schemas appear to be well written, credit to Microsoft for that.
+A final note, the APIs appear to have changed quite a bit over the years. If you look at the resource manager APIs from 2 years ago (2015 era) those are vastly different from the APIs we have now (2017). I have found the more recent APIs to be much better organized and easier to navigate, the schemas appear to be well written, credit to Microsoft for that. If you're using older APIs, I suggest you just upgrade to more recent APIs but be mindful of breakage and test throughly.
