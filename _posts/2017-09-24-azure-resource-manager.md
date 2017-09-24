@@ -176,3 +176,5 @@ Though, I don't know where that `WebApps` name is coming from, in this particula
 Now, I wish there was a more convinent way of navigating these JSON schema files, havent found one but the details are there. What properties you can use and at least a line or two about what it does. You'll have to reverse engineer the rest but at least this is as transparent and low-level as it gets, if you cannot find what you're looking for here, then it cannot be done or there's no API or setting to facilitate what you are looking for.
 
 The Azure resource explorer ties together these two pices of information to build a catalog of everything that is and everything that can be done. While the Azure resource explorer can show you API version information, I'm going to assume it's only showing you the latest really.
+
+An overview of the things outline here for the Azure portal can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-supported-services).
