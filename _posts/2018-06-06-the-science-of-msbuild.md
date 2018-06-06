@@ -69,7 +69,7 @@ We can then put an `Import` directive in our original project file to make the f
 
 With all of this configured MSBuild will build the code generation tool, the generated code and the project that depends on the generated code as needed. A lot of this has to with the fact that we are building the code generation tool from within the same solution that it is also being used to generate code elsewhere. This is something MSBuild doesn't do very well.
 
-**Edit: ** Oh, and none of this works from within Visual Studio, you have to run msbuild on the command line without the `/m` option. If anyone knows of a way to fix this please contact me.
+> 📝 **Edit:** Oh, and none of this works from within Visual Studio, you have to run msbuild on the command line without the `/m` option. If anyone knows of a way to fix this please contact me.
 
 ## The mindfuck that is MSBuild
 
