@@ -17,10 +17,9 @@ It wasn't until the next day I discovered that the post was a two years old. I t
 >
 > My last point, is a bit harder for me to argue objectively about but game development grew from a culture that wasn't motivated by greed (simply making a game for the purpose of making money). These people wanted to make a game because it was part what they believed they should do. A lot of the traditional churn that plague software development does not exist when your reason for doing what you do is so well bespoken. These people are self-motivated talented people and they get to do what they love while many of us don't. These people make rational decisions about what they need to do next to move forward, they don't waste a lot of time in meetings. If they did, they'd run out of business, because they need to ship the next game.
 >
-> If you want to know more about the process of game development I urge you to read some of the publications available from EA DICE or Insomniac Games (they talk about this stuff becuase it make a lot of sense in the context of what they do!) I can personally recommend [#GDC12 Ron Pieket: Developing Imperfect Software: The Movie][2] ([video][3]).
+> If you want to know more about the process of game development I urge you to read some of the publications available from EA DICE or Insomniac Games (they talk about this stuff becuase it make a lot of sense in the context of what they do!) I can personally recommend [#GDC12 Ron Pieket: Developing Imperfect Software: The Movie][2].
 >
 > That said, game development is not traditional software development, if you think that, you will fail at it. As to whether they are ahead or not, I'm pretty sure they've been ahead the rest of us from the start. You just need to know where to look.
 
 [1]: http://blog.chromosundrift.com/2011/04/are-game-developers-15-years-behind.html
-[2]: http://www.insomniacgames.com/gdc12-ron-pieket-developing-imperfect-software-the-movie/
-[3]: https://vimeo.com/39689487
+[2]: https://www.gdcvault.com/play/1015531/Developing-Imperfect-Software-How-to
